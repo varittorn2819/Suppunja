@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{t.lang}}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{p.title}}</title>
+<meta name="description" content="{{p.desc}}">
+<link rel="canonical" href="{{p.url}}">
+{{p.alternates}}
+<meta property="og:type" content="{{p.type}}"><meta property="og:site_name" content="{{t.short}}">
+<meta property="og:title" content="{{p.title}}"><meta property="og:description" content="{{p.desc}}">
+<meta property="og:url" content="{{p.url}}"><meta property="og:locale" content="{{t.locale}}">{{p.ogLocales}}
+<meta property="og:image" content="{{p.image}}"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"{{t.name}}","url":"{{site}}/","telephone":"{{cfg.phoneTel}}"}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family={{t.font}}&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body data-ga="{{cfg.gaId}}">
+<div class="top"><div class="wrap"><span>{{t.top.license}} <b>{{cfg.license}}</b></span><span>📞 <a href="tel:{{cfg.phoneTel}}">{{cfg.phone}}</a> · {{t.top.hours}}</span></div></div>
+<header><div class="wrap">
+<a class="logo" href="{{home}}">{{t.name}}</a>
+<nav><a href="{{home}}#about">{{t.nav.about}}</a><a href="{{home}}#history">{{t.nav.history}}</a><a href="{{home}}#services">{{t.nav.services}}</a><a href="{{home}}#why">{{t.nav.why}}</a><a href="{{home}}#offices">{{t.nav.offices}}</a><a href="{{home}}blog/">{{t.nav.blog}}</a></nav>
+<div class="lang">{{p.switcher}}</div>
+<a class="btn" href="{{home}}#contact">{{t.nav.contact}}</a>
+</div></header>
+<main>{{content}}</main>
+<footer><div class="wrap">
+<p><b>{{t.name}}</b></p><p>{{t.legal}}</p>
+<p>{{t.top.license}} {{cfg.license}} · {{cfg.email}}</p>
+<p style="margin-top:10px"><a href="{{home}}privacy-policy.html" style="text-decoration:underline">{{t.footer.privacy}}</a> · <a href="{{home}}blog/" style="text-decoration:underline">{{t.nav.blog}}</a></p>
+<p style="margin-top:10px">© <span id="y"></span> {{t.name}} · {{t.footer.rights}}</p>
+</div></footer>
+<div class="float"><a class="line" href="{{cfg.line}}" target="_blank" rel="noopener" title="LINE">💬</a><a class="msn" href="{{cfg.messenger}}" target="_blank" rel="noopener" title="Messenger">✉️</a><a class="tel" href="tel:{{cfg.phoneTel}}" title="{{t.contact.call}}">📞</a></div>
+<div id="ck" role="dialog"><p>{{t.cookie.text}}</p><button class="ok" id="ckOk">{{t.cookie.ok}}</button><button class="no" id="ckNo">{{t.cookie.no}}</button></div>
+<script src="/assets/main.js" defer></script>
+</body></html>

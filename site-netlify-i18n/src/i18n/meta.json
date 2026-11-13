@@ -1,0 +1,47 @@
+{
+ "th": {
+  "lang": "th",
+  "hreflang": "th",
+  "locale": "th_TH",
+  "prefix": "",
+  "label": "ไทย",
+  "dateLocale": "th-TH",
+  "font": "Noto+Sans+Thai:wght@400;500;700",
+  "cat": {
+   "คู่มือ": "คู่มือ",
+   "ความรู้": "ความรู้",
+   "มติคณะรัฐมนตรี": "มติคณะรัฐมนตรี",
+   "ข่าวสาร": "ข่าวสาร"
+  }
+ },
+ "en": {
+  "lang": "en",
+  "hreflang": "en",
+  "locale": "en_US",
+  "prefix": "/en",
+  "label": "EN",
+  "dateLocale": "en-GB",
+  "font": "Noto+Sans:wght@400;500;700",
+  "cat": {
+   "คู่มือ": "Guide",
+   "ความรู้": "Knowledge",
+   "มติคณะรัฐมนตรี": "Cabinet resolution",
+   "ข่าวสาร": "News"
+  }
+ },
+ "zh": {
+  "lang": "zh-Hans",
+  "hreflang": "zh-Hans",
+  "locale": "zh_CN",
+  "prefix": "/zh",
+  "label": "中文",
+  "dateLocale": "zh-CN",
+  "font": "Noto+Sans+SC:wght@400;500;700",
+  "cat": {
+   "คู่มือ": "指南",
+   "ความรู้": "知识",
+   "มติคณะรัฐมนตรี": "内阁决议",
+   "ข่าวสาร": "资讯"
+  }
+ }
+}

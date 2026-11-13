@@ -1,0 +1,17 @@
+<div class="hero"><div class="wrap"><span class="tag">{{t.hero.tag}}</span><h1>{{t.name}}</h1>
+<p>{{t.hero.sub}} · {{t.top.license}} {{cfg.license}}</p><div class="stats">{{html.stats}}</div></div></div>
+<section id="about"><div class="wrap two"><div><div class="eyebrow">{{t.about.eyebrow}}</div><h2>{{t.about.title}}</h2>
+<p>{{t.about.p1}}</p><p style="margin-top:10px">{{t.about.p2}}</p><p style="margin-top:10px">{{t.about.p3}}</p></div>{{html.aboutVis}}</div></section>
+<section id="history" class="alt-bg"><div class="wrap"><div class="eyebrow">{{t.history.eyebrow}}</div><h2>{{t.history.title}}</h2><p class="lead">{{t.history.lead}}</p>
+<div class="timeline">{{html.timeline}}</div><p style="margin-top:22px">📍 {{t.history.addr}}</p></div></section>
+{{html.services}}{{html.why}}{{html.benefits}}
+<section class="alt-bg"><div class="wrap two"><div><div class="eyebrow">{{t.tech.eyebrow}}</div><h2>{{t.tech.title}}</h2><p>{{t.tech.text}}</p></div>{{html.techVis}}</div></section>
+{{html.offices}}{{html.news}}
+<section id="contact" class="cta"><div class="wrap"><h2>{{t.contact.title}}</h2><p>{{t.contact.lead}}</p>
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="{{home}}">
+<input type="hidden" name="form-name" value="contact"><input type="hidden" name="lang" value="{{lang}}">
+<p hidden><label>Do not fill <input name="bot-field"></label></p>
+<input name="name" placeholder="{{t.contact.name}}" required><input name="phone" type="tel" placeholder="{{t.contact.phone}}" required>
+<input name="email" type="email" placeholder="{{t.contact.email}}"><textarea name="message" rows="4" placeholder="{{t.contact.msg}}"></textarea>
+<label style="font-size:14px;display:flex;gap:8px;align-items:flex-start"><input type="checkbox" name="consent" required style="width:auto;margin-top:6px"><span>{{t.contact.consent}}</span></label>
+<button class="btn" type="submit">{{t.contact.send}}</button></form></div></section>

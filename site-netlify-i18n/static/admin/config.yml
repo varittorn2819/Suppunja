@@ -1,0 +1,195 @@
+backend:
+  name: github
+  repo: YOUR-GITHUB-USER/YOUR-REPO   # แก้เป็น repo ของคุณ
+  branch: main
+media_folder: static/uploads
+public_folder: /uploads
+locale: th
+i18n:
+  structure: multiple_folders
+  locales: [th, en, zh]
+  default_locale: th
+collections:
+  - name: posts
+    label: 📰 ข่าวสาร / คู่มือ / ความรู้
+    label_singular: บทความ
+    description: เพิ่มบทความใหม่ เลือกหมวด "ข่าวสาร" สำหรับข่าว บทความล่าสุด 3 ชิ้นจะขึ้นที่หน้าแรกอัตโนมัติ
+    folder: src/content/posts
+    create: true
+    slug: "{{year}}{{month}}{{day}}-{{hour}}{{minute}}"
+    i18n: true
+    fields:
+      - {label: หัวข้อ, name: title, widget: string, i18n: true}
+      - {label: วันที่, name: date, widget: datetime, i18n: duplicate}
+      - {label: หมวดหมู่, name: category, widget: select, options: [ข่าวสาร, คู่มือ, ความรู้, มติคณะรัฐมนตรี], i18n: duplicate}
+      - {label: คำอธิบายสั้น (SEO), name: description, widget: text, i18n: true}
+      - {label: รูปปก, name: image, widget: image, required: false, i18n: duplicate}
+      - {label: เนื้อหา, name: body, widget: markdown, i18n: true}
+  - name: settings
+    label: ⚙️ ตั้งค่าเว็บไซต์
+    description: "ข้อความที่อยู่ในวงเล็บ [[ ]] คือส่วนที่ยังต้องแก้ไข ให้พิมพ์ข้อมูลจริงแล้วลบ [[ ]] ออก ใส่ **ตัวหนา** ได้ในช่องย่อหน้า 'เกี่ยวกับเรา'"
+    files:
+      - name: config
+        label: ข้อมูลติดต่อและระบบ
+        file: src/config.json
+        fields:
+          - {label: ที่อยู่เว็บไซต์ (โดเมน), name: siteUrl, widget: string, hint: "เช่น https://www.example.com ไม่ต้องมี / ท้าย"}
+          - {label: เลขที่ใบอนุญาต, name: license, widget: string}
+          - {label: เบอร์โทร (แสดงบนเว็บ), name: phone, widget: string}
+          - {label: เบอร์โทร (รูปแบบสากล), name: phoneTel, widget: string, hint: "เช่น +66812345678"}
+          - {label: อีเมล, name: email, widget: string}
+          - {label: ลิงก์ LINE Official, name: line, widget: string}
+          - {label: ลิงก์ Facebook Messenger, name: messenger, widget: string}
+          - {label: Google Analytics 4 ID, name: gaId, widget: string, hint: "รูปแบบ G-XXXXXXXXXX"}
+      - name: th
+        label: 🇹🇭 เนื้อหาหน้าแรก (ไทย)
+        file: src/i18n/th.json
+        fields: &content
+          - {label: ชื่อบริษัท (หัวข้อใหญ่), name: name, widget: string}
+          - {label: ชื่อสั้น (ท้ายแท็บเบราว์เซอร์), name: short, widget: string}
+          - {label: ชื่อที่จดทะเบียน (ท้ายเว็บ), name: legal, widget: string}
+          - label: SEO หน้าแรก
+            name: meta
+            widget: object
+            fields:
+              - {label: Title (ชื่อบนผลค้นหา), name: title, widget: string}
+              - {label: Description (คำอธิบายบนผลค้นหา), name: desc, widget: text}
+          - label: เมนู
+            name: nav
+            widget: object
+            fields:
+              - {label: เกี่ยวกับเรา, name: about, widget: string}
+              - {label: ประวัติ, name: history, widget: string}
+              - {label: บริการ, name: services, widget: string}
+              - {label: ทำไมต้องเรา, name: why, widget: string}
+              - {label: จุดบริการ, name: offices, widget: string}
+              - {label: บทความ, name: blog, widget: string}
+              - {label: ติดต่อ, name: contact, widget: string}
+          - label: แถบบนสุด
+            name: top
+            widget: object
+            fields:
+              - {label: คำว่า "ใบอนุญาตเลขที่", name: license, widget: string}
+              - {label: เวลาทำการ, name: hours, widget: string}
+          - label: ส่วนบนสุด (Hero)
+            name: hero
+            widget: object
+            fields:
+              - {label: ป้ายเล็ก, name: tag, widget: string}
+              - {label: ข้อความใต้ชื่อ, name: sub, widget: string}
+          - label: ตัวเลขสถิติ
+            name: stats
+            widget: list
+            fields:
+              - {label: ตัวเลข, name: n, widget: string}
+              - {label: คำอธิบาย, name: l, widget: string}
+          - label: เกี่ยวกับเรา
+            name: about
+            widget: object
+            fields:
+              - {label: หัวข้อเล็ก, name: eyebrow, widget: string}
+              - {label: หัวข้อ, name: title, widget: string}
+              - {label: ย่อหน้า 1, name: p1, widget: text}
+              - {label: ย่อหน้า 2, name: p2, widget: text}
+              - {label: ย่อหน้า 3, name: p3, widget: text}
+              - {label: รูปภาพ (ถ้าไม่ใส่จะแสดงกล่องว่าง), name: image, widget: image, required: false}
+              - {label: ข้อความในกล่องว่าง, name: ph, widget: string, required: false}
+          - label: ประวัติบริษัท
+            name: history
+            widget: object
+            fields:
+              - {label: หัวข้อเล็ก, name: eyebrow, widget: string}
+              - {label: หัวข้อ, name: title, widget: string}
+              - {label: คำอธิบาย, name: lead, widget: text, required: false}
+              - label: เหตุการณ์
+                name: items
+                widget: list
+                fields:
+                  - {label: ปี, name: y, widget: string}
+                  - {label: เหตุการณ์, name: text, widget: text}
+              - {label: ที่อยู่สำนักงานใหญ่, name: addr, widget: string}
+          - label: ส่วน "การดำเนินธุรกิจ"
+            name: services
+            widget: object
+            fields: &sec
+              - {label: หัวข้อเล็ก, name: eyebrow, widget: string}
+              - {label: หัวข้อ, name: title, widget: string}
+              - {label: คำอธิบาย, name: lead, widget: text, required: false}
+              - label: รายการ
+                name: items
+                widget: list
+                fields:
+                  - {label: ไอคอน (อีโมจิ), name: ic, widget: string}
+                  - {label: หัวข้อ, name: title, widget: string}
+                  - {label: ข้อความ, name: text, widget: text}
+          - {label: ส่วน "ทำไมต้องเรา", name: why, widget: object, fields: *sec}
+          - {label: ส่วน "ประโยชน์ที่นายจ้างได้รับ", name: benefits, widget: object, fields: *sec}
+          - label: ระบบติดตามเอกสาร
+            name: tech
+            widget: object
+            fields:
+              - {label: หัวข้อเล็ก, name: eyebrow, widget: string}
+              - {label: หัวข้อ, name: title, widget: string}
+              - {label: ข้อความ, name: text, widget: text}
+              - {label: รูปภาพ, name: image, widget: image, required: false}
+              - {label: ข้อความในกล่องว่าง, name: ph, widget: string, required: false}
+          - {label: จุดรับเอกสาร / สาขา, name: offices, widget: object, fields: *sec}
+          - label: ส่วนข่าวสารล่าสุด (หน้าแรก)
+            name: news
+            widget: object
+            fields:
+              - {label: หัวข้อเล็ก, name: eyebrow, widget: string}
+              - {label: หัวข้อ, name: title, widget: string}
+              - {label: ข้อความปุ่ม "ดูทั้งหมด", name: more, widget: string}
+          - label: ฟอร์มติดต่อ
+            name: contact
+            widget: object
+            fields:
+              - {label: หัวข้อ, name: title, widget: string}
+              - {label: คำอธิบาย, name: lead, widget: string}
+              - {label: ช่องชื่อ, name: name, widget: string}
+              - {label: ช่องเบอร์โทร, name: phone, widget: string}
+              - {label: ช่องอีเมล, name: email, widget: string}
+              - {label: ช่องข้อความ, name: msg, widget: string}
+              - {label: ข้อความยินยอม (ก่อนลิงก์), name: consent, widget: string}
+              - {label: ข้อความลิงก์นโยบาย, name: consent_link, widget: string}
+              - {label: ปุ่มส่ง, name: send, widget: string}
+              - {label: ปุ่มโทร, name: call, widget: string}
+          - label: ท้ายเว็บ
+            name: footer
+            widget: object
+            fields:
+              - {label: ลิงก์นโยบายความเป็นส่วนตัว, name: privacy, widget: string}
+              - {label: ลิขสิทธิ์, name: rights, widget: string}
+          - label: แบนเนอร์คุกกี้
+            name: cookie
+            widget: object
+            fields:
+              - {label: ข้อความ (ก่อนลิงก์), name: text, widget: text}
+              - {label: ข้อความลิงก์, name: link, widget: string}
+              - {label: ปุ่มยอมรับ, name: ok, widget: string}
+              - {label: ปุ่มปฏิเสธ, name: "no", widget: string}
+          - label: หน้ารวมบทความ
+            name: blog
+            widget: object
+            fields:
+              - {label: หัวข้อ, name: title, widget: string}
+              - {label: คำอธิบาย (SEO), name: desc, widget: string}
+              - {label: ข้อความเมื่อยังไม่มีบทความ, name: empty, widget: string}
+      - name: en
+        label: 🇬🇧 เนื้อหาหน้าแรก (อังกฤษ)
+        file: src/i18n/en.json
+        fields: *content
+      - name: zh
+        label: 🇨🇳 เนื้อหาหน้าแรก (จีน)
+        file: src/i18n/zh.json
+        fields: *content
+  - name: pages
+    label: 📄 นโยบายความเป็นส่วนตัว
+    folder: src/content/pages
+    create: false
+    i18n: true
+    fields:
+      - {label: หัวข้อ, name: title, widget: string, i18n: true}
+      - {label: คำอธิบายสั้น (SEO), name: description, widget: text, i18n: true}
+      - {label: เนื้อหา, name: body, widget: markdown, i18n: true}

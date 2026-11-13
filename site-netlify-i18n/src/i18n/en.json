@@ -1,0 +1,213 @@
+{
+ "name": "Sappancha Foreign Worker Employment Agency Co., Ltd.",
+ "short": "Sappancha",
+ "legal": "Registered in Thailand as บริษัท นำคนต่างด้าวมาทำงานในประเทศ ทรัพย์ปัญจะ จำกัด",
+ "meta": {
+  "title": "Sappancha Foreign Worker Employment Agency Co., Ltd. | Licensed Migrant Worker Import in Thailand",
+  "desc": "Licensed, end-to-end import of migrant workers into Thailand under MOU from Myanmar, Laos and Cambodia."
+ },
+ "nav": {
+  "about": "About",
+  "history": "History",
+  "services": "Services",
+  "why": "Why Us",
+  "offices": "Offices",
+  "blog": "Guides",
+  "contact": "Contact"
+ },
+ "top": {
+  "license": "License No.",
+  "hours": "Mon–Sat 8:00–17:00"
+ },
+ "hero": {
+  "tag": "🏢 About the company",
+  "sub": "End-to-end, fully legal import of foreign workers into Thailand"
+ },
+ "stats": [
+  {
+   "n": "[[XX]]",
+   "l": "Years of experience"
+  },
+  {
+   "n": "[[XX]]",
+   "l": "Service points"
+  },
+  {
+   "n": "[[X,XXX+]]",
+   "l": "Cases per year"
+  },
+  {
+   "n": "100%",
+   "l": "Legal compliance"
+  }
+ ],
+ "about": {
+  "eyebrow": "About Us",
+  "title": "About us: fully legal, fully managed",
+  "p1": "**Quality, lawful foreign-worker services** backed by efficient management systems and technology that tracks every step.",
+  "p2": "We handle documents, nationality verification and MOU imports from **Myanmar, Laos and Cambodia**.",
+  "p3": "We act as a partner who protects your interests and works like a close HR team.",
+  "ph": "📷 Add company / team photo",
+  "image": ""
+ },
+ "history": {
+  "eyebrow": "Company History",
+  "title": "Company history",
+  "lead": "[[Edit years and milestones to match the real history.]]",
+  "items": [
+   {
+    "y": "[[XXXX]]",
+    "text": "Company founded [[(describe first business)]]"
+   },
+   {
+    "y": "[[XXXX]]",
+    "text": "Expanded into foreign-worker import"
+   },
+   {
+    "y": "[[XXXX]]",
+    "text": "Licensed to bring foreign workers into Thailand"
+   }
+  ],
+  "addr": "[[Head office address]]"
+ },
+ "services": {
+  "eyebrow": "Business Operation",
+  "title": "What we do",
+  "lead": "Operating within the law, with professionalism and integrity.",
+  "items": [
+   {
+    "ic": "📋",
+    "title": "Worker import",
+    "text": "Documents, nationality verification and MOU for Myanmar, Laos and Cambodia"
+   },
+   {
+    "ic": "💡",
+    "title": "Modern technology",
+    "text": "Continuously improved systems, including document tracking"
+   },
+   {
+    "ic": "🛡️",
+    "title": "After-sales care",
+    "text": "Support and problem-solving throughout the contract"
+   },
+   {
+    "ic": "⏳",
+    "title": "Experience",
+    "text": "From registration and verification through to MOU"
+   }
+  ]
+ },
+ "why": {
+  "eyebrow": "Why Choose Us?",
+  "title": "Why choose us",
+  "items": [
+   {
+    "ic": "👥",
+    "title": "Ready team",
+    "text": "Experts who act at every step without delay"
+   },
+   {
+    "ic": "✅",
+    "title": "Care through the contract",
+    "text": "Support for workers and advice for employers"
+   },
+   {
+    "ic": "🌐",
+    "title": "Wide network",
+    "text": "Service points in many areas with clear plans"
+   },
+   {
+    "ic": "🗺️",
+    "title": "Proactive planning",
+    "text": "We prevent problems and fix them fast"
+   }
+  ]
+ },
+ "benefits": {
+  "eyebrow": "Employer Benefits",
+  "title": "Benefits for employers",
+  "items": [
+   {
+    "ic": "🤝",
+    "title": "Confidence",
+    "text": "Workers enter and work legally"
+   },
+   {
+    "ic": "🔧",
+    "title": "Fast resolution",
+    "text": "Fair, targeted solutions protecting both sides"
+   },
+   {
+    "ic": "📋",
+    "title": "Less paperwork",
+    "text": "Lighter document and HR workload"
+   },
+   {
+    "ic": "🎯",
+    "title": "Your selection",
+    "text": "Choose workers who fit your needs"
+   }
+  ]
+ },
+ "tech": {
+  "eyebrow": "Technology",
+  "title": "Document tracking",
+  "text": "Track the status of workers’ documents at any time. [[(Adjust to your real system)]]",
+  "ph": "📲 Add QR-code / tracking screenshot",
+  "image": ""
+ },
+ "offices": {
+  "eyebrow": "Service Points",
+  "title": "Document collection points",
+  "lead": "[[Edit branches to match real locations.]]",
+  "items": [
+   {
+    "ic": "🏢",
+    "title": "Head office",
+    "text": "[[Address / province]]"
+   },
+   {
+    "ic": "📍",
+    "title": "Branch 1",
+    "text": "[[Address / province]]"
+   },
+   {
+    "ic": "📍",
+    "title": "Branch 2",
+    "text": "[[Address / province]]"
+   }
+  ]
+ },
+ "contact": {
+  "title": "Foreign-worker services, all in one place",
+  "lead": "Leave your details and we will get back to you soon.",
+  "name": "Name / company",
+  "phone": "Phone number",
+  "email": "Email (optional)",
+  "msg": "How can we help?",
+  "consent": "I consent to the company collecting and using my data to contact me, per the",
+  "send": "Send message",
+  "call": "Call us",
+  "consent_link": "Privacy Policy"
+ },
+ "footer": {
+  "privacy": "Privacy Policy",
+  "rights": "All rights reserved."
+ },
+ "cookie": {
+  "text": "We use cookies to analyse site usage. You may accept or decline. See our",
+  "ok": "Accept",
+  "no": "Decline",
+  "link": "Privacy Policy"
+ },
+ "blog": {
+  "title": "Guides & knowledge",
+  "desc": "Guides, know-how and news on hiring foreign workers in Thailand",
+  "empty": "No articles in this language yet."
+ },
+ "news": {
+  "eyebrow": "Latest News",
+  "title": "Latest news & guides",
+  "more": "View all"
+ }
+}
